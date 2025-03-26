@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Evita desplazamiento global */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Limita el ancho máximo a 400px (típico de dispositivos móviles) */
+    max-height: 90vh; /* Limita el alto máximo de la caja */
+    overflow-y: auto; /* Habilita el scroll vertical si es necesario */
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px; /* Aseguramos que el título no sea tan grande */
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 14px; /* Tamaño de texto para mejor legibilidad */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+input[type="date"], input[type="time"] {
+    width: 100%;
+    max-width: 200px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%; /* Hace el botón tan ancho como el formulario */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos adicionales para una mejor visualización en dispositivos móviles */
+@media (max-width: 480px) {
+    .container {
+        width: 100%; /* Hace que el formulario ocupe todo el ancho disponible en pantallas pequeñas */
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px; /* Reduce el tamaño del título en pantallas pequeñas */
+    }
+
+    .campo input, .campo textarea {
+        font-size: 13px; /* Ajusta el tamaño de la fuente en campos de entrada */
+    }
+
+    button {
+        font-size: 14px; /* Ajusta el tamaño del botón */
+    }
+}

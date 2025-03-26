@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Visita al Cultivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de visita técnica</h1>
+        <form action="#" method="POST" class="formulario">
+            <div class="campo">
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+            
+            <div class="campo">
+                <label for="hora">Hora</label>
+                <input type="time" id="hora" name="hora" required>
+            </div>
+
+            <div class="campo">
+                <label for="municipio">Municipio</label>
+                <input type="text" id="municipio" name="municipio" required>
+            </div>
+
+            <div class="campo">
+                <label for="vereda">Vereda</label>
+                <input type="text" id="vereda" name="vereda" required>
+            </div>
+
+            <div class="campo">
+                <label for="cultivo">Cultivo</label>
+                <input type="text" id="cultivo" name="cultivo" required>
+            </div>
+
+            <div class="campo">
+                <label for="coordenadas">Ubicación - Coordenadas</label>
+                <input type="text" id="coordenadas" name="coordenadas" required>
+            </div>
+
+            <div class="campo">
+                <label for="finca">Finca</label>
+                <input type="text" id="finca" name="finca" required>
+            </div>
+
+            <div class="campo">
+                <label for="lote">Lote#</label>
+                <input type="text" id="lote" name="lote" required>
+            </div>
+
+            <div class="campo">
+                <label for="plantas"># Plantas actual</label>
+                <input type="number" id="plantas" name="plantas" required>
+            </div>
+
+            <div class="campo">
+                <label for="nombre_visita">Nombre de quien hizo la visita</label>
+                <input type="text" id="nombre_visita" name="nombre_visita" required>
+            </div>
+
+            <div class="campo">
+                <label for="nombre_productor">Nombre del productor que recibe</label>
+                <input type="text" id="nombre_productor" name="nombre_productor" required>
+            </div>
+
+            <div class="campo">
+                <label for="diagnostico">Diagnóstico de campo</label>
+                <textarea id="diagnostico" name="diagnostico" rows="4" required></textarea>
+            </div>
+
+            <div class="campo">
+                <label for="estado_clima">Estado del clima</label>
+                <input type="text" id="estado_clima" name="estado_clima" required>
+            </div>
+
+            <div class="campo">
+                <label for="labores">Labores de cultivo y prácticas culturales</label>
+                <textarea id="labores" name="labores" rows="4" required></textarea>
+            </div>
+
+            <div class="campo">
+                <label for="estado_fisiologico">Estado fisiológico del cultivo</label>
+                <input type="text" id="estado_fisiologico" name="estado_fisiologico" required>
+            </div>
+
+            <div class="campo">
+                <label for="monitoreo">Monitoreo (2 pples + incidencia)</label>
+                <input type="text" id="monitoreo" name="monitoreo" required>
+            </div>
+
+            <div class="campo">
+                <label for="ultima_fumigacion">Última fumigación</label>
+                <input type="date" id="ultima_fumigacion" name="ultima_fumigacion" required>
+            </div>
+
+            <div class="campo">
+                <label for="plan_fumigacion">Plan de fumigación x 2-3 semanas</label>
+                <textarea id="plan_fumigacion" name="plan_fumigacion" rows="4" required></textarea>
+            </div>
+
+            <div class="campo">
+                <label for="nutricion">Nutrición de cultivo</label>
+                <textarea id="nutricion" name="nutricion" rows="4" required></textarea>
+            </div>
+
+            <div class="campo">
+                <label for="cosecha">Cosecha actual</label>
+                <input type="text" id="cosecha" name="cosecha" required>
+            </div>
+
+            <div class="campo">
+                <label for="proyeccion">Proyección cosecha</label>
+                <input type="text" id="proyeccion" name="proyeccion" required>
+            </div>
+
+            <div class="campo">
+                <label for="calidad_cosecha">Calidad de cosecha y poscosecha</label>
+                <textarea id="calidad_cosecha" name="calidad_cosecha" rows="4" required></textarea>
+            </div>
+
+
+            <div class="campo">
+                <label for="problematicas">Problemáticas del cultivo</label>
+                <textarea id="problematicas" name="problematicas" rows="4" required></textarea>
+            </div>
+
+            <div class="campo">
+                <label for="recomendaciones">Otras recomendaciones</label>
+                <textarea id="recomendaciones" name="recomendaciones" rows="4" required></textarea>
+            </div>
+
+            <div class="campo">
+                <label for="logistica">Logística y transporte - ruta hora</label>
+                <textarea id="logistica" name="logistica" rows="4" required></textarea>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
