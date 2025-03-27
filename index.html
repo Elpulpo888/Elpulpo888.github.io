@@ -296,17 +296,294 @@
 
             
             <!-- Sección: Diagnóstico Técnico del Cultivo -->
-            <div class="seccion-diagnostico">
+            <section class="seccion-diagnostico">
                 <h3>Diagnóstico Técnico del Cultivo</h3>
 
                 <!-- Aquí puedes agregar más campos según sea necesario -->
 
+                <!-- Campo: Problemáticas principales del cultivo -->
+                <div class="campo">
+                    <label for="problematicas">Problemáticas principales del cultivo</label>
+                    <select id="problematicas" name="problematicas" required>
+                        <option value="">Seleccione una problemática</option>
+                        <option value="estado_del_cultivo">Estado del cultivo</option>
+                        <option value="comercial">Comercial</option>
+                        <option value="logistica">Logística</option>
+                    </select>
+                </div>
+
+                <!-- Campo: Detalle (input de texto abierto) -->
+                <div class="campo">
+                    <label for="detalle">Detalle</label>
+                    <textarea id="detalle" name="detalle" placeholder="Ingrese detalles sobre la problemática" rows="4"></textarea>
+                </div>
+
+                <!-- Campo: Acción esperada -->
+                <div class="campo">
+                    <label for="accion_esperada">Acción esperada</label>
+                    <input type="text" id="accion_esperada" name="accion_esperada" placeholder="Ingrese la acción esperada" required>
+                </div>
+
+                <!-- Campo: Prioridad (lista desplegable con opciones Baja, Media, Alta) -->
+                <div class="campo">
+                    <label for="prioridad">Prioridad</label>
+                    <select id="prioridad" name="prioridad" required>
+                        <option value="">Seleccione la prioridad</option>
+                        <option value="baja">Baja</option>
+                        <option value="media">Media</option>
+                        <option value="alta">Alta</option>
+                    </select>
+                </div>
+
+                <!-- Campo: Observaciones del estado del cultivo -->
+                <div class="campo">
+                    <label for="observaciones_estado">Observaciones del estado del cultivo</label>
+                    <textarea id="observaciones_estado" name="observaciones_estado" placeholder="Ingrese observaciones sobre el estado del cultivo" rows="4"></textarea>
+                </div>
+
+                <!-- Campo: Labores de cultivo y prácticas culturales -->
+                <div class="campo">
+                    <label for="labores_cultivo">Labores de cultivo y prácticas culturales</label>
+                    <textarea id="labores_cultivo" name="labores_cultivo" placeholder="Ingrese las labores realizadas en el cultivo" rows="4"></textarea>
+                </div>
+
+                <!-- Sección: Campos de Fumigación -->
+                <section class="seccion-fumigacion">
+                    <h3>Campos de Fumigación (Plan para las próximas 4 semanas)</h3>
+
+                    <!-- Semana 1 -->
+                    <div class="campo">
+                        <label for="fumigacion_semana_1_fecha">Semana 1 - Fecha de la aplicación</label>
+                        <input type="date" id="fumigacion_semana_1_fecha" name="fumigacion_semana_1_fecha">
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_semana_1_productos">Semana 1 - Productos</label>
+                        <input type="text" id="fumigacion_semana_1_productos" name="fumigacion_semana_1_productos" placeholder="Ej: Producto 1, Producto 2">
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_semana_1_dosis">Semana 1 - Dosis (especifica)</label>
+                        <input type="text" id="fumigacion_semana_1_dosis" name="fumigacion_semana_1_dosis" placeholder="Ej: 100ml por litro de agua">
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_semana_1_dosis_200">Semana 1 - Dosis por 200 litros</label>
+                        <input type="text" id="fumigacion_semana_1_dosis_200" name="fumigacion_semana_1_dosis_200" placeholder="Ej: 2000ml por 200 litros de agua">
+                    </div>
+
+                    <!-- Semana 2 -->
+                    <div class="campo">
+                        <label for="fumigacion_semana_2_fecha">Semana 2 - Fecha de la aplicación</label>
+                        <input type="date" id="fumigacion_semana_2_fecha" name="fumigacion_semana_2_fecha">
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_semana_2_productos">Semana 2 - Productos</label>
+                        <input type="text" id="fumigacion_semana_2_productos" name="fumigacion_semana_2_productos" placeholder="Ej: Producto 1, Producto 2">
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_semana_2_dosis">Semana 2 - Dosis (especifica)</label>
+                        <input type="text" id="fumigacion_semana_2_dosis" name="fumigacion_semana_2_dosis" placeholder="Ej: 100ml por litro de agua">
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_semana_2_dosis_200">Semana 2 - Dosis por 200 litros</label>
+                        <input type="text" id="fumigacion_semana_2_dosis_200" name="fumigacion_semana_2_dosis_200" placeholder="Ej: 2000ml por 200 litros de agua">
+                    </div>
+
+                    <!-- Semana 3 -->
+                    <div class="campo">
+                        <label for="fumigacion_semana_3_fecha">Semana 3 - Fecha de la aplicación</label>
+                        <input type="date" id="fumigacion_semana_3_fecha" name="fumigacion_semana_3_fecha">
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_semana_3_productos">Semana 3 - Productos</label>
+                        <input type="text" id="fumigacion_semana_3_productos" name="fumigacion_semana_3_productos" placeholder="Ej: Producto 1, Producto 2">
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_semana_3_dosis">Semana 3 - Dosis (especifica)</label>
+                        <input type="text" id="fumigacion_semana_3_dosis" name="fumigacion_semana_3_dosis" placeholder="Ej: 100ml por litro de agua">
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_semana_3_dosis_200">Semana 3 - Dosis por 200 litros</label>
+                        <input type="text" id="fumigacion_semana_3_dosis_200" name="fumigacion_semana_3_dosis_200" placeholder="Ej: 2000ml por 200 litros de agua">
+                    </div>
+
+                    <!-- Semana 4 -->
+                    <div class="campo">
+                        <label for="fumigacion_semana_4_fecha">Semana 4 - Fecha de la aplicación</label>
+                        <input type="date" id="fumigacion_semana_4_fecha" name="fumigacion_semana_4_fecha">
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_semana_4_productos">Semana 4 - Productos</label>
+                        <input type="text" id="fumigacion_semana_4_productos" name="fumigacion_semana_4_productos" placeholder="Ej: Producto 1, Producto 2">
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_semana_4_dosis">Semana 4 - Dosis (especifica)</label>
+                        <input type="text" id="fumigacion_semana_4_dosis" name="fumigacion_semana_4_dosis" placeholder="Ej: 100ml por litro de agua">
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_semana_4_dosis_200">Semana 4 - Dosis por 200 litros</label>
+                        <input type="text" id="fumigacion_semana_4_dosis_200" name="fumigacion_semana_4_dosis_200" placeholder="Ej: 2000ml por 200 litros de agua">
+                    </div>
+                </section>
+
+
+
+
+                <section class="seccion-nutricion">
+                    <h3>Campos de Nutrición (Plan para las próximas 4 semanas)</h3>
+    
+                    <!-- Semana 1 -->
+                    <div class="campo">
+                        <label for="nutricion_semana_1_fecha">Semana 1 - Fecha de aplicación</label>
+                        <input type="date" id="nutricion_semana_1_fecha" name="nutricion_semana_1_fecha">
+                    </div>
+                    <div class="campo">
+                        <label for="nutricion_semana_1_producto">Semana 1 - Producto</label>
+                        <input type="text" id="nutricion_semana_1_producto" name="nutricion_semana_1_producto" placeholder="Ej: Fertilizante A, Fertilizante B">
+                    </div>
+                    <div class="campo">
+                        <label for="nutricion_semana_1_dosis">Semana 1 - Dosis</label>
+                        <input type="text" id="nutricion_semana_1_dosis" name="nutricion_semana_1_dosis" placeholder="Ej: 100ml por litro de agua">
+                    </div>
+    
+                    <!-- Semana 2 -->
+                    <div class="campo">
+                        <label for="nutricion_semana_2_fecha">Semana 2 - Fecha de aplicación</label>
+                        <input type="date" id="nutricion_semana_2_fecha" name="nutricion_semana_2_fecha">
+                    </div>
+                    <div class="campo">
+                        <label for="nutricion_semana_2_producto">Semana 2 - Producto</label>
+                        <input type="text" id="nutricion_semana_2_producto" name="nutricion_semana_2_producto" placeholder="Ej: Fertilizante A, Fertilizante B">
+                    </div>
+                    <div class="campo">
+                        <label for="nutricion_semana_2_dosis">Semana 2 - Dosis</label>
+                        <input type="text" id="nutricion_semana_2_dosis" name="nutricion_semana_2_dosis" placeholder="Ej: 100ml por litro de agua">
+                    </div>
+    
+                    <!-- Semana 3 -->
+                    <div class="campo">
+                        <label for="nutricion_semana_3_fecha">Semana 3 - Fecha de aplicación</label>
+                        <input type="date" id="nutricion_semana_3_fecha" name="nutricion_semana_3_fecha">
+                    </div>
+                    <div class="campo">
+                        <label for="nutricion_semana_3_producto">Semana 3 - Producto</label>
+                        <input type="text" id="nutricion_semana_3_producto" name="nutricion_semana_3_producto" placeholder="Ej: Fertilizante A, Fertilizante B">
+                    </div>
+                    <div class="campo">
+                        <label for="nutricion_semana_3_dosis">Semana 3 - Dosis</label>
+                        <input type="text" id="nutricion_semana_3_dosis" name="nutricion_semana_3_dosis" placeholder="Ej: 100ml por litro de agua">
+                    </div>
+    
+                    <!-- Semana 4 -->
+                    <div class="campo">
+                        <label for="nutricion_semana_4_fecha">Semana 4 - Fecha de aplicación</label>
+                        <input type="date" id="nutricion_semana_4_fecha" name="nutricion_semana_4_fecha">
+                    </div>
+                    <div class="campo">
+                        <label for="nutricion_semana_4_producto">Semana 4 - Producto</label>
+                        <input type="text" id="nutricion_semana_4_producto" name="nutricion_semana_4_producto" placeholder="Ej: Fertilizante A, Fertilizante B">
+                    </div>
+                    <div class="campo">
+                        <label for="nutricion_semana_4_dosis">Semana 4 - Dosis</label>
+                        <input type="text" id="nutricion_semana_4_dosis" name="nutricion_semana_4_dosis" placeholder="Ej: 100ml por litro de agua">
+                    </div>
+                </section>
+
+                <!-- Campo: Maneja focalizado de enfermedades -->
+                <div class="campo">
+                    <label for="maneja_focalizado_enfermedades">Maneja focalizado de enfermedades</label>
+                    <input type="text" id="maneja_focalizado_enfermedades" name="maneja_focalizado_enfermedades" placeholder="Especificar manejo focalizado de enfermedades">
+                </div>
+
+
+
+                <!-- Campo: Calidad de cosecha -->
+                <div class="campo">
+                    <label for="calidad_cosecha">Calidad de Cosecha</label>
+                    <select id="calidad_cosecha" name="calidad_cosecha" required>
+                        <option value="">Seleccione presencia de causales</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <!-- Campo: Causales de rechazo -->
+                <div class="campo">
+                    <label for="causales_rechazo">Causales de rechazo</label>
+                    <input type="text" id="causales_rechazo" name="causales_rechazo" placeholder="Especificar causales de rechazo">
+                </div>
+
+                <!-- Campo: Acciones -->
+                <div class="campo">
+                    <label for="acciones">Acciones</label>
+                    <input type="text" id="acciones" name="acciones" placeholder="Especificar acciones a tomar">
+                </div>
+
+                <!-- Campo: Calidad poscosecha -->
+                <div class="campo">
+                    <label for="calidad_poscosecha">Calidad poscosecha</label>
+                    <select id="calidad_poscosecha" name="calidad_poscosecha" required>
+                        <option value="">Seleccione presencia de causales</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <!-- Campo: Causales de rechazo -->
+                <div class="campo">
+                    <label for="causales_rechazo_poscosecha">Causales de rechazo</label>
+                    <input type="text" id="causales_rechazo_poscosecha" name="causales_rechazo_poscosecha" placeholder="Especificar causales de rechazo">
+                </div>
+
+                <!-- Campo: Acciones -->
+                <div class="campo">
+                    <label for="acciones_poscosecha">Acciones</label>
+                    <input type="text" id="acciones_poscosecha" name="acciones_poscosecha" placeholder="Especificar acciones a tomar">
+                </div>
+
+                <!-- Letrero: Foto del cultivo y fruta (confirmar) -->
+                <div class="campo">
+                    <label for="foto_cultivo" style="font-weight: normal; color: #888;">
+                        Foto del cultivo y fruta (confirmar)
+                    </label>
+                </div>
+
+                <!-- Letrero: Logística y transporte - ruta hora (confirmar) -->
+                <div class="campo">
+                    <label for="logistica_transporte" style="font-weight: normal; color: #888;">
+                        Logística y transporte - ruta hora (confirmar)
+                    </label>
+                </div>
+
+            
+                <!-- Campo: Nombre de quien hizo la visita -->
+                <div class="campo">
+                    <label for="nombre_visita">Nombre de quien hizo la visita</label>
+                    <select id="nombre_visita" name="nombre_visita" required>
+                        <option value="">Seleccione un nombre</option>
+                        <option value="Maria">Maria</option>
+                        <option value="Carlos">Carlos</option>
+                        <option value="Sebastian">Sebastian</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+
+
+                                <!-- Campo: Nombre del productor que recibe -->
+                <div class="campo">
+                    <label for="nombre_productor" >Nombre del productor que recibe (Nombre completo y CC)</label>
+                    <input type="text" id="nombre_productor" name="nombre_productor" placeholder="Ingresa el nombre completo y CC">
+                </div>
+
+
+
+
+
+            </section>
+
+
+            <div class="campo">
+                <button type="submit">Enviar</button>
             </div>
-
-
-
-
-
+            
         </form>
     </div>
 
