@@ -5,139 +5,311 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Visita al Cultivo</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script> <!-- Enlazamos el archivo JS -->
 </head>
 <body>
     <div class="container">
         <h1>Formulario de visita técnica</h1>
         <form action="#" method="POST" class="formulario">
-            <div class="campo">
-                <label for="fecha">Fecha</label>
-                <input type="date" id="fecha" name="fecha" required>
-            </div>
+            <!-- Sección del Formulario de Visita Técnica -->
+            <section class="seccion-visita">
+                <h2>Formulario de Visita Técnica</h2>
+
+                <!-- Campo de Fecha -->
+                <div class="campo">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <!-- Campo de Semana Actual -->
+                <div class="campo">
+                    <label for="semana">Semana Actual</label>
+                    <input type="text" id="semana" name="semana" readonly>
+                </div>
+
+                <!-- Campo de Hora -->
+                <div class="campo">
+                    <label for="hora">Hora</label>
+                    <input type="time" id="hora" name="hora" required>
+                </div>
+
+                <!-- Campo de Municipio como lista desplegable -->
+                <div class="campo">
+                    <label for="municipio">Municipio</label>
+                    <select id="municipio" name="municipio" required>
+                        <option value="">Seleccione un municipio</option>
+                        <option value="Urrao">Urrao</option>
+                        <option value="Sonson">Sonson</option>
+                        <option value="Unión">Unión</option>
+                        <option value="Carmen de Viboral">Carmen de Viboral</option>
+                        <option value="Guarne">Guarne</option>
+                        <option value="Carolina del Principe">Carolina del Príncipe</option>
+                        <option value="Gomez Plata">Gomez Plata</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                </div>
+
+                <!-- Campo de Vereda como input de texto -->
+                <div class="campo">
+                    <label for="vereda">Vereda</label>
+                    <input type="text" id="vereda" name="vereda" required>
+                </div>
+
+                <!-- Campo de Cultivo como lista desplegable -->
+                <!-- Campo de Cultivo como lista desplegable -->
+                <div class="campo">
+                    <label for="cultivo">Cultivo</label>
+                    <select id="cultivo" name="cultivo" required>
+                        <option value="">Seleccione un cultivo</option>
+                        <option value="Gulupa">Gulupa</option>
+                        <option value="Uchuva">Uchuva</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                </div>
+
+             <!-- Campo de Finca como input de texto -->
+                <div class="campo">
+                    <label for="finca">Finca</label>
+                    <input type="text" id="finca" name="finca" required>
+                </div>
+                
+                <!-- Campo de Zona como lista desplegable -->
+                <div class="campo">
+                    <label for="zona">Zona</label>
+                    <select id="zona" name="zona" required>
+                        <option value="">Seleccione una zona</option>
+                        <option value="122">122</option>
+                        <option value="123">123</option>
+                        <option value="124">124</option>
+                        <option value="125">125</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+
+                <!-- Campo de Lote como input de número -->
+                <div class="campo">
+                    <label for="lote">Lote</label>
+                    <input type="number" id="lote" name="lote" required>
+                </div>
+
+                <!-- Campo de Coordenadas como input de texto -->
+                <div class="campo">
+                    <label for="coordenadas">Coordenadas</label>
+                    <input type="text" id="coordenadas" name="coordenadas" required>
+                </div>
+
+               <!-- Campo de # Plantas actual como input de número -->
+                <div class="campo">
+                    <label for="plantas"># Plantas actual</label>
+                    <input type="number" id="plantas" name="plantas" required>
+                </div>
+            </section>
             
-            <div class="campo">
-                <label for="hora">Hora</label>
-                <input type="time" id="hora" name="hora" required>
+            <!-- Sección de Condiciones generales del predio -->
+            <section class="seccion-condiciones">
+                <h2>Condiciones generales del predio</h2>
+
+                <!-- Puedes empezar a añadir campos aquí -->
+                <!-- Campo de Precipitación última semana como lista desplegable -->
+                <div class="campo">
+                    <label for="precipitacion">Precipitación última semana</label>
+                    <select id="precipitacion" name="precipitacion" required>
+                        <option value="">Seleccione</option>
+                        <option value="0mm">0mm Semanal</option>
+                        <option value="1-50mm">1-50mm Semanal</option>
+                        <option value="51-100mm">51-100mm Semanal</option>
+                        <option value="+100mm">+100mm Semanal</option>
+                    </select>
+                </div>
+
+                <!-- Campo de Estado fisiológico del cultivo como lista desplegable -->
+                <div class="campo">
+                    <label for="estado_fisiologico">Estado fisiológico del cultivo</label>
+                    <select id="estado_fisiologico" name="estado_fisiologico" required>
+                        <option value="">Seleccione</option>
+                        <option value="crecimiento">Crecimiento y desarrollo inicial</option>
+                        <option value="emision_brotes">Emisión de brotes y floración</option>
+                        <option value="floracion">Floración y producción</option>
+                        <option value="produccion">Producción</option>
+                        <option value="poda">Poda</option>
+                    </select>
+                </div>
+
+                <!-- Sección para las fumigaciones de las últimas 4 semanas -->
+                <div class="seccion-fumigaciones">
+                    <h3>Últimas fumigaciones</h3>
+
+                    <!-- Una semana atrás -->
+                    <div class="campo">
+                        <label for="fumigacion_una_semana_fecha">Una semana atrás - Fecha de la aplicación</label>
+                        <input type="date" id="fumigacion_una_semana_fecha" name="fumigacion_una_semana_fecha" required>
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_una_semana_productos">Una semana atrás - Productos utilizados</label>
+                        <input type="text" id="fumigacion_una_semana_productos" name="fumigacion_una_semana_productos" required placeholder="Ej: Producto 1, Producto 2">
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_una_semana_dosis">Una semana atrás - Dosis</label>
+                        <input type="text" id="fumigacion_una_semana_dosis" name="fumigacion_una_semana_dosis" required placeholder="Ej: 100ml por litro de agua">
+                    </div>
+
+                    <!-- Dos semanas atrás -->
+                    <div class="campo">
+                        <label for="fumigacion_dos_semanas_fecha">Dos semanas atrás - Fecha de la aplicación</label>
+                        <input type="date" id="fumigacion_dos_semanas_fecha" name="fumigacion_dos_semanas_fecha" required>
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_dos_semanas_productos">Dos semanas atrás - Productos utilizados</label>
+                        <input type="text" id="fumigacion_dos_semanas_productos" name="fumigacion_dos_semanas_productos" required placeholder="Ej: Producto 1, Producto 2">
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_dos_semanas_dosis">Dos semanas atrás - Dosis</label>
+                        <input type="text" id="fumigacion_dos_semanas_dosis" name="fumigacion_dos_semanas_dosis" required placeholder="Ej: 100ml por litro de agua">
+                    </div>
+
+                    <!-- Tres semanas atrás -->
+                    <div class="campo">
+                        <label for="fumigacion_tres_semanas_fecha">Tres semanas atrás - Fecha de la aplicación</label>
+                        <input type="date" id="fumigacion_tres_semanas_fecha" name="fumigacion_tres_semanas_fecha" required>
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_tres_semanas_productos">Tres semanas atrás - Productos utilizados</label>
+                        <input type="text" id="fumigacion_tres_semanas_productos" name="fumigacion_tres_semanas_productos" required placeholder="Ej: Producto 1, Producto 2">
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_tres_semanas_dosis">Tres semanas atrás - Dosis</label>
+                        <input type="text" id="fumigacion_tres_semanas_dosis" name="fumigacion_tres_semanas_dosis" required placeholder="Ej: 100ml por litro de agua">
+                    </div>
+
+                    <!-- Cuatro semanas atrás -->
+                    <div class="campo">
+                        <label for="fumigacion_cuatro_semanas_fecha">Cuatro semanas atrás - Fecha de la aplicación</label>
+                        <input type="date" id="fumigacion_cuatro_semanas_fecha" name="fumigacion_cuatro_semanas_fecha" required>
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_cuatro_semanas_productos">Cuatro semanas atrás - Productos utilizados</label>
+                        <input type="text" id="fumigacion_cuatro_semanas_productos" name="fumigacion_cuatro_semanas_productos" required placeholder="Ej: Producto 1, Producto 2">
+                    </div>
+                    <div class="campo">
+                        <label for="fumigacion_cuatro_semanas_dosis">Cuatro semanas atrás - Dosis</label>
+                        <input type="text" id="fumigacion_cuatro_semanas_dosis" name="fumigacion_cuatro_semanas_dosis" required placeholder="Ej: 100ml por litro de agua">
+                    </div>
+                </div>
+
+
+                <!-- Sección: Monitoreo (Plagas y Enfermedades) -->
+                <div class="seccion-monitoreo">
+                    <h3>Monitoreo de Plagas y Enfermedades</h3>
+
+                    <!-- Lista desplegable para seleccionar Plagas o Enfermedades -->
+                    <div class="campo">
+                        <label for="plaga_enfermedad_1">Plaga o Enfermedad Observada</label>
+                        <select id="plaga_enfermedad_1" name="plaga_enfermedad_1" required>
+                            <option value="trips">TRIPS (plaga)</option>
+                            <option value="dasiops">DASIOPS (plaga)</option>
+                            <option value="otros_plagas">Otros (plagas)</option>
+                            <option value="rona_y_alternaria">Roña y alternaria (enfermedad)</option>
+                            <option value="bacteriosis">Bacteriosis (enfermedad)</option>
+                            <option value="gota">Gota (enfermedad)</option>
+                            <option value="otros_enfermedades">Otros (enfermedades)</option>
+                        </select>
+                    </div>
+
+                    <!-- Incidencia en porcentaje -->
+                    <div class="campo">
+                        <label for="incidencia_plaga_enfermedad_1">Incidencia (%)</label>
+                        <input type="number" id="incidencia_plaga_enfermedad_1" name="incidencia_plaga_enfermedad_1" min="0" max="100" required>
+                    </div>
+
+                    <!-- Severidad de 0 a 100 -->
+                    <div class="campo">
+                        <label for="severidad_plaga_enfermedad_1">Severidad (0 a 100)</label>
+                        <input type="number" id="severidad_plaga_enfermedad_1" name="severidad_plaga_enfermedad_1" min="0" max="100" required>
+                    </div>
+                </div>
+
+                <!-- Sección: Monitoreo (Plagas y Enfermedades) - Segunda vez -->
+                <div class="seccion-monitoreo">
+                    <h3>Monitoreo de Plagas y Enfermedades</h3>
+
+                    <!-- Lista desplegable para seleccionar Plagas o Enfermedades -->
+                    <div class="campo">
+                        <label for="plaga_enfermedad_2">Plaga o Enfermedad Observada</label>
+                        <select id="plaga_enfermedad_2" name="plaga_enfermedad_2" required>
+                            <option value="trips">TRIPS (plaga)</option>
+                            <option value="dasiops">DASIOPS (plaga)</option>
+                            <option value="otros_plagas">Otros (plagas)</option>
+                            <option value="rona_y_alternaria">Roña y alternaria (enfermedad)</option>
+                            <option value="bacteriosis">Bacteriosis (enfermedad)</option>
+                            <option value="gota">Gota (enfermedad)</option>
+                            <option value="otros_enfermedades">Otros (enfermedades)</option>
+                        </select>
+                    </div>
+
+                    <!-- Incidencia en porcentaje -->
+                    <div class="campo">
+                        <label for="incidencia_plaga_enfermedad_2">Incidencia (%)</label>
+                        <input type="number" id="incidencia_plaga_enfermedad_2" name="incidencia_plaga_enfermedad_2" min="0" max="100" required>
+                    </div>
+
+                    <!-- Severidad de 0 a 100 -->
+                    <div class="campo">
+                        <label for="severidad_plaga_enfermedad_2">Severidad (0 a 100)</label>
+                        <input type="number" id="severidad_plaga_enfermedad_2" name="severidad_plaga_enfermedad_2" min="0" max="100" required>
+                    </div>
+                </div>
+
+    
+
+                <!-- Campo: Cosecha actual -->
+                <div class="campo">
+                    <label for="cosecha_actual">Cosecha Actual (Canastillas)</label>
+                    <input type="number" id="cosecha_actual" name="cosecha_actual" required>
+                </div>
+
+                
+                <!-- Sección: Proyección de Cosecha -->
+                <div class="campo">
+                    <label for="proyeccion_semana_1">Proyección de Cosecha - Semana 1 (kg)</label>
+                    <input type="number" id="proyeccion_semana_1" name="proyeccion_semana_1" required>
+                </div>
+
+                <div class="campo">
+                    <label for="proyeccion_semana_2">Proyección de Cosecha - Semana 2 (kg)</label>
+                    <input type="number" id="proyeccion_semana_2" name="proyeccion_semana_2" required>
+                </div>
+
+                <div class="campo">
+                    <label for="proyeccion_semana_3">Proyección de Cosecha - Semana 3 (kg)</label>
+                    <input type="number" id="proyeccion_semana_3" name="proyeccion_semana_3" required>
+                </div>
+
+                <div class="campo">
+                    <label for="proyeccion_semana_4">Proyección de Cosecha - Semana 4 (kg)</label>
+                    <input type="number" id="proyeccion_semana_4" name="proyeccion_semana_4" required>
+                </div>
+
+
+
+                
+            </section>
+
+            
+            <!-- Sección: Diagnóstico Técnico del Cultivo -->
+            <div class="seccion-diagnostico">
+                <h3>Diagnóstico Técnico del Cultivo</h3>
+
+                <!-- Aquí puedes agregar más campos según sea necesario -->
+
             </div>
 
-            <div class="campo">
-                <label for="municipio">Municipio</label>
-                <input type="text" id="municipio" name="municipio" required>
-            </div>
-
-            <div class="campo">
-                <label for="vereda">Vereda</label>
-                <input type="text" id="vereda" name="vereda" required>
-            </div>
-
-            <div class="campo">
-                <label for="cultivo">Cultivo</label>
-                <input type="text" id="cultivo" name="cultivo" required>
-            </div>
-
-            <div class="campo">
-                <label for="coordenadas">Ubicación - Coordenadas</label>
-                <input type="text" id="coordenadas" name="coordenadas" required>
-            </div>
-
-            <div class="campo">
-                <label for="finca">Finca</label>
-                <input type="text" id="finca" name="finca" required>
-            </div>
-
-            <div class="campo">
-                <label for="lote">Lote#</label>
-                <input type="text" id="lote" name="lote" required>
-            </div>
-
-            <div class="campo">
-                <label for="plantas"># Plantas actual</label>
-                <input type="number" id="plantas" name="plantas" required>
-            </div>
-
-            <div class="campo">
-                <label for="nombre_visita">Nombre de quien hizo la visita</label>
-                <input type="text" id="nombre_visita" name="nombre_visita" required>
-            </div>
-
-            <div class="campo">
-                <label for="nombre_productor">Nombre del productor que recibe</label>
-                <input type="text" id="nombre_productor" name="nombre_productor" required>
-            </div>
-
-            <div class="campo">
-                <label for="diagnostico">Diagnóstico de campo</label>
-                <textarea id="diagnostico" name="diagnostico" rows="4" required></textarea>
-            </div>
-
-            <div class="campo">
-                <label for="estado_clima">Estado del clima</label>
-                <input type="text" id="estado_clima" name="estado_clima" required>
-            </div>
-
-            <div class="campo">
-                <label for="labores">Labores de cultivo y prácticas culturales</label>
-                <textarea id="labores" name="labores" rows="4" required></textarea>
-            </div>
-
-            <div class="campo">
-                <label for="estado_fisiologico">Estado fisiológico del cultivo</label>
-                <input type="text" id="estado_fisiologico" name="estado_fisiologico" required>
-            </div>
-
-            <div class="campo">
-                <label for="monitoreo">Monitoreo (2 pples + incidencia)</label>
-                <input type="text" id="monitoreo" name="monitoreo" required>
-            </div>
-
-            <div class="campo">
-                <label for="ultima_fumigacion">Última fumigación</label>
-                <input type="date" id="ultima_fumigacion" name="ultima_fumigacion" required>
-            </div>
-
-            <div class="campo">
-                <label for="plan_fumigacion">Plan de fumigación x 2-3 semanas</label>
-                <textarea id="plan_fumigacion" name="plan_fumigacion" rows="4" required></textarea>
-            </div>
-
-            <div class="campo">
-                <label for="nutricion">Nutrición de cultivo</label>
-                <textarea id="nutricion" name="nutricion" rows="4" required></textarea>
-            </div>
-
-            <div class="campo">
-                <label for="cosecha">Cosecha actual</label>
-                <input type="text" id="cosecha" name="cosecha" required>
-            </div>
-
-            <div class="campo">
-                <label for="proyeccion">Proyección cosecha</label>
-                <input type="text" id="proyeccion" name="proyeccion" required>
-            </div>
-
-            <div class="campo">
-                <label for="calidad_cosecha">Calidad de cosecha y poscosecha</label>
-                <textarea id="calidad_cosecha" name="calidad_cosecha" rows="4" required></textarea>
-            </div>
 
 
-            <div class="campo">
-                <label for="problematicas">Problemáticas del cultivo</label>
-                <textarea id="problematicas" name="problematicas" rows="4" required></textarea>
-            </div>
 
-            <div class="campo">
-                <label for="recomendaciones">Otras recomendaciones</label>
-                <textarea id="recomendaciones" name="recomendaciones" rows="4" required></textarea>
-            </div>
 
-            <div class="campo">
-                <label for="logistica">Logística y transporte - ruta hora</label>
-                <textarea id="logistica" name="logistica" rows="4" required></textarea>
-            </div>
-
-            <button type="submit">Enviar</button>
         </form>
     </div>
+
+    <script src="script.js" defer></script> <!-- Asegúrate de que el archivo JS está al final del body -->
 </body>
 </html>
