@@ -14,6 +14,15 @@ body {
     overflow: hidden; /* Evita desplazamiento global */
 }
 
+select {
+    width: 100%;
+    padding: 20px; /* Aumentamos el padding para que se vea más grande */
+    font-size: 20px; /* Aumentado 200% (de 14px a 28px) */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+
 .container {
     background-color: #fff;
     padding: 20px;
@@ -30,8 +39,19 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
-    font-size: 24px; /* Aseguramos que el título no sea tan grande */
+    font-size: 44px; /* 200% más grande que el tamaño original de 24px */
 }
+
+h2 {
+    font-size: 36px; /* 200% más grande que el tamaño original de 16px */
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 32px; /* 200% más grande que el tamaño original de 16px */
+    margin-bottom: 15px;
+}
+
 
 .formulario {
     display: flex;
@@ -46,7 +66,7 @@ label {
     font-weight: bold;
     margin-bottom: 5px;
     display: block;
-    font-size: 14px; /* Tamaño de texto para mejor legibilidad */
+    font-size: 22px
 }
 
 input, textarea {
@@ -54,7 +74,7 @@ input, textarea {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
-    font-size: 14px;
+    font-size: 22px;
 }
 
 input[type="date"], input[type="time"] {
@@ -81,6 +101,102 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+
+.seccion-visita {
+    background-color: #A8DADC; /* Color azul pastel */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espacio inferior para separar las secciones */
+}
+
+.seccion-condiciones {
+    background-color: #FDFD96; /* Color azul pastel */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espacio inferior para separar las secciones */
+}
+
+.seccion-diagnostico {
+    background-color: #FDFD96; /* Color azul pastel */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espacio inferior para separar las secciones */
+}
+
+.seccion-fumigacion {
+    background-color: #A8DADC; /* Color azul pastel */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espacio inferior para separar las secciones */
+}
+
+.seccion-fumigaciones-atras {
+    background-color: #A8DADC; /* Color azul pastel */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espacio inferior para separar las secciones */
+}
+
+.seccion-monitoreo-atras {
+    background-color: #FDFD96; /* Color azul pastel */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espacio inferior para separar las secciones */
+}
+
+.seccion-nutricion {
+    background-color: #FDFD96; /* Color azul pastel */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espacio inferior para separar las secciones */
+}
+
+.seccion-focalizado {
+    background-color: #A8DADC; /* Color azul pastel */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espacio inferior para separar las secciones */
+}
+
+.seccion-cosecha{
+    background-color: #A8DADC; /* Color azul pastel */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espacio inferior para separar las secciones */
+}
+
+/* Estilo para alinear Producto y Dosis en una fila */
+.campo-flex {
+    display: flex;
+    justify-content: space-between;  /* Espacio entre los dos elementos */
+    gap: 20px;  /* Espacio entre el producto y la dosis */
+}
+
+.campo-producto,
+.campo-dosis {
+    flex: 1; /* Ambos campos toman un 50% del espacio disponible */
+}
+
+.campo-producto select,
+.campo-dosis input {
+    width: 100%;  /* Asegura que ambos campos ocupen el 100% del espacio disponible en su contenedor */
+}
+
+.campo-dosis span {
+    margin-left: 10px; /* Espacio entre el input de dosis y el texto "cc/L" */
+    font-size: 0.9em; /* Ajusta el tamaño del texto */
+}
+
 
 /* Estilos adicionales para una mejor visualización en dispositivos móviles */
 @media (max-width: 480px) {

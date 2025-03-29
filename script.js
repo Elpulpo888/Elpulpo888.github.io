@@ -30,6 +30,18 @@ function obtenerHoraActual() {
     document.getElementById('hora').value = `${horas}:${minutos}`;
 }
 
+// Función para habilitar el campo 'Otros' cuando se selecciona la opción 'Otros'
+function activarCampo(campo) {
+    let campoSeleccionado = document.getElementById(campo).value;
+
+    // Dependiendo del campo, habilitamos o deshabilitamos el campo correspondiente para 'Otros'
+    if (campoSeleccionado === "Otros" || campoSeleccionado === "Otro") {
+        document.getElementById(campo + "-otros").disabled = false;
+    } else {
+        document.getElementById(campo + "-otros").disabled = true;
+    }
+}
+
 // Llamamos a las funciones cuando la página carga
 window.onload = function() {
     obtenerFechaActual();  // Rellenar automáticamente la fecha
