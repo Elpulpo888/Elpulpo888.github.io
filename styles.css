@@ -1,3 +1,4 @@
+/* Estilos generales para asegurar que todo esté alineado correctamente */
 * {
     margin: 0;
     padding: 0;
@@ -11,47 +12,39 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden; /* Evita desplazamiento global */
+    overflow: hidden;
+    flex-direction: column;
 }
-
-select {
-    width: 100%;
-    padding: 20px; /* Aumentamos el padding para que se vea más grande */
-    font-size: 20px; /* Aumentado 200% (de 14px a 28px) */
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
 
 .container {
     background-color: #fff;
-    padding: 20px;
+    padding: 12px; /* Aumentado un 20% */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px; /* Limita el ancho máximo a 400px (típico de dispositivos móviles) */
-    max-height: 90vh; /* Limita el alto máximo de la caja */
-    overflow-y: auto; /* Habilita el scroll vertical si es necesario */
+    max-width: 600px; /* Aumentado el máximo ancho */
+    max-height: 90vh;
+    overflow-y: auto;
     box-sizing: border-box;
+    text-align: center;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 24px; /* Aumentado un 20% */
     color: #333;
-    font-size: 44px; /* 200% más grande que el tamaño original de 24px */
+    font-size: 36px; /* Aumentado un 20% */
 }
 
 h2 {
-    font-size: 36px; /* 200% más grande que el tamaño original de 16px */
-    margin-bottom: 15px;
+    font-size: 26px; /* Aumentado un 20% */
+    margin-bottom: 18px; /* Aumentado un 20% */
 }
 
 h3 {
-    font-size: 32px; /* 200% más grande que el tamaño original de 16px */
-    margin-bottom: 15px;
+    font-size: 24px; /* Aumentado un 20% */
+    margin-bottom: 18px; /* Aumentado un 20% */
 }
-
 
 .formulario {
     display: flex;
@@ -59,161 +52,156 @@ h3 {
 }
 
 .campo {
-    margin-bottom: 15px;
+    margin-bottom: 18px; /* Aumentado un 20% */
 }
 
 label {
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 6px; /* Aumentado un 20% */
     display: block;
-    font-size: 22px
+    font-size: 16px; /* Aumentado un 20% */
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
+input, select {
+    width: 20%;
+    padding: 12px; /* Aumentado un 20% */
     border-radius: 5px;
     border: 1px solid #ddd;
-    font-size: 22px;
+    font-size: 19px; /* Aumentado un 20% */
 }
 
 input[type="date"], input[type="time"] {
-    width: 100%;
-    max-width: 200px;
+    width: 30%;
+    max-width: 240px; /* Aumentado un 20% */
 }
 
 textarea {
     resize: vertical;
+    width: 80%;
+    padding: 12px; /* Aumentado un 20% */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 19px; /* Aumentado un 20% */
 }
 
 button {
-    padding: 12px 20px;
+    padding: 15px 24px; /* Aumentado un 20% */
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-    width: 100%; /* Hace el botón tan ancho como el formulario */
+    font-size: 17px; /* Aumentado un 20% */
+    margin-top: 12px; /* Aumentado un 20% */
+    width: 100%;
 }
 
 button:hover {
     background-color: #45a049;
 }
 
-
+/* Secciones con colores originales */
 .seccion-visita {
-    background-color: #A8DADC; /* Color azul pastel */
-    padding: 20px;
+    background-color: #A8DADC;
+    padding: 24px; /* Aumentado un 20% */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Espacio inferior para separar las secciones */
+    margin-bottom: 24px; /* Aumentado un 20% */
 }
 
-.seccion-condiciones {
-    background-color: #FDFD96; /* Color azul pastel */
-    padding: 20px;
+.seccion-condiciones, .seccion-diagnostico, .seccion-nutricion {
+    background-color: #FDFD96;
+    padding: 24px; /* Aumentado un 20% */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Espacio inferior para separar las secciones */
+    margin-bottom: 24px; /* Aumentado un 20% */
 }
 
-.seccion-diagnostico {
-    background-color: #FDFD96; /* Color azul pastel */
-    padding: 20px;
+.seccion-fumigacion, .seccion-fumigaciones-atras, .seccion-focalizado, .seccion-cosecha {
+    background-color: #A8DADC;
+    padding: 24px; /* Aumentado un 20% */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Espacio inferior para separar las secciones */
+    margin-bottom: 24px; /* Aumentado un 20% */
 }
 
-.seccion-fumigacion {
-    background-color: #A8DADC; /* Color azul pastel */
-    padding: 20px;
+.seccion-monitoreo-atras, .seccion-monitoreo {
+    background-color: #FDFD96;
+    padding: 24px; /* Aumentado un 20% */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Espacio inferior para separar las secciones */
+    margin-bottom: 24px; /* Aumentado un 20% */
 }
 
-.seccion-fumigaciones-atras {
-    background-color: #A8DADC; /* Color azul pastel */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Espacio inferior para separar las secciones */
-}
-
-.seccion-monitoreo-atras {
-    background-color: #FDFD96; /* Color azul pastel */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Espacio inferior para separar las secciones */
-}
-
-.seccion-nutricion {
-    background-color: #FDFD96; /* Color azul pastel */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Espacio inferior para separar las secciones */
-}
-
-.seccion-focalizado {
-    background-color: #A8DADC; /* Color azul pastel */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Espacio inferior para separar las secciones */
-}
-
-.seccion-cosecha{
-    background-color: #A8DADC; /* Color azul pastel */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Espacio inferior para separar las secciones */
-}
-
-/* Estilo para alinear Producto y Dosis en una fila */
+/* Modificaciones específicas para plagas y enfermedades */
 .campo-flex {
     display: flex;
-    justify-content: space-between;  /* Espacio entre los dos elementos */
-    gap: 20px;  /* Espacio entre el producto y la dosis */
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente fila cuando no haya suficiente espacio */
+    gap: 18px; /* Aumentado un 20% */
+    justify-content: space-between;
 }
 
-.campo-producto,
+.campo-plaga {
+    flex: 1 1 100%; /* La "Plaga" ocupa toda la fila */
+    min-width: 180px; /* Aumentado un 20% */
+}
+
+.campo-incidencia,
+.campo-severidad,
 .campo-dosis {
-    flex: 1; /* Ambos campos toman un 50% del espacio disponible */
+    flex: 1 1 30%; /* Los otros dos campos (Incidencia y Severidad) ocupan la mitad de la fila cada uno */
+    min-width: 180px; /* Aumentado un 20% */
 }
 
-.campo-producto select,
-.campo-dosis input {
-    width: 100%;  /* Asegura que ambos campos ocupen el 100% del espacio disponible en su contenedor */
+label {
+    font-weight: bold;
+    margin-bottom: 6px; /* Aumentado un 20% */
+    display: block;
+    font-size: 18px; /* Aumentado un 20% */
 }
 
-.campo-dosis span {
-    margin-left: 10px; /* Espacio entre el input de dosis y el texto "cc/L" */
-    font-size: 0.9em; /* Ajusta el tamaño del texto */
+input, select {
+    width: 80%;
+    padding: 12px; /* Aumentado un 20% */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 19px; /* Aumentado un 20% */
 }
 
+input[type="number"] {
+    font-size: 19px; /* Aumentado un 20% */
+}
 
-/* Estilos adicionales para una mejor visualización en dispositivos móviles */
+/* En pantallas pequeñas (móviles) */
 @media (max-width: 480px) {
     .container {
-        width: 100%; /* Hace que el formulario ocupe todo el ancho disponible en pantallas pequeñas */
-        padding: 15px;
+        width: 100%;
+        padding: 18px;
     }
 
-    h1 {
-        font-size: 20px; /* Reduce el tamaño del título en pantallas pequeñas */
+    .campo-flex {
+        /* En pantallas pequeñas, mantener el mismo diseño en fila (sin apilar) */
+        flex: 1 1 45%; /* Esto asegura que los productos y dosis ocupen el 45% y no se apilen */
+        gap: 10px; /* Menos espacio en pantallas pequeñas */
     }
 
-    .campo input, .campo textarea {
-        font-size: 13px; /* Ajusta el tamaño de la fuente en campos de entrada */
+    .campo-producto,
+    .campo-dosis {
+        flex: 1; /* Asegura que los elementos dentro de los productos y dosis se comporten bien */
+    }
+    
+    /* En pantallas móviles, aseguramos que la dosis y producto no cambien de disposición */
+    .campo-plaga,
+    .campo-incidencia,
+    .campo-severidad {
+        display: inline-block;  /* Aseguramos que los campos no se apilen */
+        width: 45%; /* Los campos de plaga, incidencia y severidad ocupan el 45% */
+        margin-right: 10px;
     }
 
-    button {
-        font-size: 14px; /* Ajusta el tamaño del botón */
+    .campo-incidencia,
+    .campo-severidad {
+        display: inline-block;
+        width: 45%; /* Aseguramos que no se apilen */
     }
 }
